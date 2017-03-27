@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+.c-cards {
+
+}
+.c-cards-title {
+    text-align: center;
+    padding-bottom: calc($base-line-height * 1.6);
+    font-size: responsive 20px 32px;
+}
+.c-cards-subtitle {
+    font-size: 16px;
+    padding-top: calc($base-line-height / 4);
+}
+
+/*
+   Individual cards
+   ========================================================================== */
+
+.c-cards__card {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-bottom: calc($base-line-height * 1.4);
+    /*max-width: 420px;*/
+    &:not(:last-of-type) {
+        margin-right: 2%;
+    }
+    @media ($mq-xs-max) {
+        max-width: 460px;
+        text-align: center;
+    }
+    @media ($mq-sm-min) and ($mq-lg-max) {
+        width: 48%;
+        flex-shrink: 0;
+    }
+    @media ($mq-xl-min) {
+        flex: 1;
+    }
+}
+.c-cards__card-footer {
+    border-top: 1px solid $colour-grey-x-light;
+    padding-top: calc($base-line-height / 2);
+    text-align: center;
+}
+.c-cards__card-text {
+    padding: 0 $grid-padding;
+}
+.c-cards__card-title {
+    font-size: responsive 16px 17px;
+    color: $colour-alpha;
+}
+
+/*
+   Card images
+   ========================================================================== */
+
+.c-cards__card-image {
+    margin-bottom: $base-line-height;
+    overflow: hidden;
+    /*background: $colour-alpha url("../../assets/svg/preload.svg") no-repeat center;*/
+    backface-visibility: hidden;
+    @mixin object-fit-parent;
+    img {
+        @mixin object-fit-image;
+        &:hover {
+            background: $colour-alpha;
+            transform: scale(1.025);
+        }
+    }
+}

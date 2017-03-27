@@ -1,0 +1,99 @@
+/* ==========================================================================
+   Form defaults
+   ========================================================================== */
+
+$input-height-sm  : 42px;
+$input-height-md  : 52px;
+
+$input-colour     : $colour-grey-dark;
+$input-border     : $colour-alpha-mid-light;
+$input-background : $colour-white;
+
+@define-mixin input {
+    width: 100%;
+    height: $base-line-height;
+    font-size: inherit;
+    color: $input-colour;
+    background: no-repeat $input-background;
+    border: 1px solid $input-border;
+    border-radius: 0;
+
+    /* stylelint-disable */
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    /* stylelint-enable */
+
+    @media ($mq-sm-max) {
+        padding: calc((($input-height-sm - 2px) - $base-line-height) / 2) 12px;
+        height: $input-height-sm;
+    }
+    @media ($mq-md-min) {
+        padding: calc((($input-height-md - 2px) - $base-line-height) / 2) 18px;
+        height: $input-height-md;
+    }
+    &:focus {
+        outline: 0;
+    }
+    &:disabled {
+        opacity: .6;
+    }
+}
+
+/*
+   Inputs
+   ========================================================================== */
+
+input {
+    @mixin input;
+    line-height: 1;
+}
+
+/* Radio/checkbox */
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: .4em;
+    width: auto;
+    & + label {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+/*
+   Textarea
+   ========================================================================== */
+
+textarea {
+    @mixin input;
+    display: block;
+    resize: vertical;
+    overflow: auto;
+}
+
+/*
+   Select
+   ========================================================================== */
+
+select {
+    @mixin input;
+    line-height: 1;
+    /* background-image: url("../../svg/icons/arrow-down-bravo.svg"); */
+    @media ($mq-sm-max) {
+        background-position: calc(100% - 12px) 50%;
+    }
+    @media ($mq-md-min) {
+        background-position: calc(100% - 20px) 50%;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &::-ms-expand {
+        display: none;
+    };
+    &:focus::-ms-value {
+        color: $input-colour;
+        background: none;
+    }
+}

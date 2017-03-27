@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Gravity Forms
+   ========================================================================== */
+
+/* Wrapper */
+
+.gform_wrapper {
+    margin: calc($base-line-height * 2) 0;
+    padding: calc($base-line-height * 2) 7.9%;
+    background: $colour-bravo-x-light;
+}
+
+/*
+   Fields
+   ========================================================================== */
+
+.gform_fields {
+    list-style: none;
+    margin: 0;
+}
+.gfield {
+    margin-bottom: $base-line-height;
+}
+
+/*
+   Required
+   ========================================================================== */
+
+.gfield_required {
+    color: $colour-bravo;
+}
+
+/*
+   Validation
+   ========================================================================== */
+
+.validation_error {
+    @mixin font-smoothing;
+    margin-bottom: $base-line-height;
+    padding: $base-line-height 4.48%;
+    color: $colour-white;
+    background: $colour-bravo;
+}
+.validation_message {
+    display: block;
+    margin-top: 4px;
+    color: $colour-bravo;
+}
+.gfield_error .ginput_container {
+    border-left: 4px solid $colour-bravo;
+}
+
+/*
+   Honeypot
+   ========================================================================== */
+
+.gform_validation_container {
+    @mixin hide-content;
+}

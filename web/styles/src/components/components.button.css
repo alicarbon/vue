@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.c-button {
+    @mixin font-smoothing;
+    display: inline-block;
+    vertical-align: top;
+    line-height: $base-line-height;
+    font-weight: $font-bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $colour-alpha;
+    background: $colour-bravo;
+    border-radius: $border-radius;
+    transition: all $transition-duration $transition-easing;
+    @media ($mq-xxs-max) {
+        display: block;
+        width: 75%;
+        margin: 0 auto;
+    }
+    @media ($mq-md-max) {
+        padding: 10px 20px;
+    }
+    @media ($mq-lg-min) and ($mq-lg-max) {
+        padding: calc($base-line-height / 2) 18px;
+    }
+    @media ($mq-xl-max) {
+        padding: calc($base-line-height / 1.8) calc($grid-padding * 2);
+    }
+    @media ($mq-xxl-min) {
+        padding: calc($base-line-height / 1.8) calc($grid-padding * 3);
+    }
+    &:hover {
+        color: $colour-white;
+        background: $colour-alpha-light;
+    }
+    & + .c-button {
+        margin-left: 6px;
+    }
+}
