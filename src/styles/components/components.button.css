@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.c-button {
+    @mixin font-smoothing;
+    display: inline-block;
+    vertical-align: top;
+    padding: calc($base-line-height / 1.8) calc($grid-padding * 1.5);
+    line-height: $base-line-height;
+    font-weight: $font-bold;
+    font-size: responsive 14px 16px;
+    text-align: center;
+    color: $colour-alpha;
+    background: $colour-bravo;
+    border-radius: $border-radius;
+    transition: all $transition-duration $transition-easing;
+    @media ($mq-xxs-max) {
+        display: block;
+        width: 75%;
+        margin: 0 auto;
+    }
+    @media ($mq-md-max) {
+        padding: 10px 20px;
+    }
+    @media ($mq-lg-min) and ($mq-lg-max) {
+        padding: calc($base-line-height / 2) 18px;
+    }
+    &:hover {
+        color: $colour-white;
+        background: $colour-alpha-dark;
+        transform: translate(2px, 2px);
+    }
+    & + .c-button {
+        margin-left: 6px;
+    }
+}
+
+.c-button--alpha {
+    color: $colour-white;
+    background: $colour-alpha;
+    box-shadow: 4px 4px 0 0 $colour-alpha-dark;
+    @mixin button-hover $colour-alpha-dark;
+}
+
+.c-button--white {
+    color: $colour-alpha;
+    background: $colour-white;
+    box-shadow: 4px 4px 0 0 $colour-alpha-dark;
+    @mixin button-hover $colour-alpha-dark;
+}
+
+.c-button--form {
+    color: $colour-white;
+    background: $colour-alpha;
+    box-shadow: 4px 4px 0 0 color($colour-grey lightness(80%));
+    border: none;
+    cursor: pointer;
+    @mixin button-hover $colour-alpha-dark;
+}

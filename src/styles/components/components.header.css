@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.c-header {
+    width: 100%;
+    padding-left: $grid-padding;
+    background: $colour-white;
+    position: relative;
+    @media ($mq-sm-max) {
+        padding-left: calc($grid-padding / 4);
+    }
+    @media ($mq-lg-max) {
+        padding-left: calc($grid-padding / 2);
+    }
+}
+
+.c-header__wrap {
+    display: flex;
+    @mixin flex-align center;
+    @media ($mq-sm-max) {
+        height: 100px;
+    }
+}
+
+/*
+   Logo
+   ========================================================================== */
+
+.c-header__brand {
+    position: relative;
+    display: block;
+    width: 242px;
+    height: 55px;
+    text-indent: -9em;
+    background: inline("../../assets/svg/brand-elements/logo.svg") no-repeat 0/contain;
+    overflow: hidden;
+    @media ($mq-sm-min) and ($mq-md-max) {
+        width: 30.58%;
+        padding-bottom: calc(28.7vw * 55/242);
+    }
+    @media ($mq-lg-min) {
+        margin: 2px 0;
+        width: 242px;
+        height: 55px;
+    }
+}
+
+
+/*
+   CTA
+   ========================================================================== */
+
+.c-header__cta {
+    display: flex;
+    background: $colour-alpha;
+    height: 100%;
+    padding: $grid-padding $grid-gutter;
+    margin-left: auto;
+    @mixin flex-base column, nowrap;
+    @media (max-width: 1280px) {
+        padding: calc($grid-padding / 1.5) calc($grid-gutter / 2);
+    }
+    @media ($mq-md-max) {
+        margin-right: 100px;
+    }
+    @media ($mq-sm-max) {
+        display: none;
+    }
+}
+.c-header__cta-text {
+    @mixin login-text;
+}
