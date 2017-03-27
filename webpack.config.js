@@ -1,4 +1,5 @@
 var path = require('path')
+var utils = require('./utils')
 var webpack = require('webpack')
 var projectRoot = path.resolve(__dirname, '/')
 
@@ -51,7 +52,15 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
-      }
+      },
+        {
+            test: /\.(svg)(\?.*)?$/,
+            loader: 'file',
+            query: {
+                limit: 10000,
+                name: utils.assetsPath('img/[name].[hash:7].[ext]')
+            }
+        },
     ]
   },
   resolve: {
