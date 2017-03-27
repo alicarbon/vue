@@ -1,0 +1,24 @@
+.c-footer {
+    width: 100%;
+    padding: 1.5em;
+    background: #000;
+}
+
+.c-footer p {
+    color: #fff;
+}
+
+.c-footer ul {
+    padding: 0;
+    text-align: center;
+}
+
+.c-footer li {
+    list-style: none;
+    display: inline;
+}
+
+.c-footer li a {
+    padding: 1em;
+    color: #fff;
+}
