@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var projectRoot = path.resolve(__dirname, '/')
 
 module.exports = {
   entry: './src/main.js',
@@ -14,7 +15,29 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-            postcss: [require('postcss-cssnext')(),require('postcss-nested')()]
+            postcss: [
+                require('postcss-import')({ addDependencyTo: webpack }),
+                require('precss'),
+                require('postcss-responsive-type'),
+                require('postcss-assets')({
+                    loadPaths: [
+                        projectRoot + '/assets/img',
+                        projectRoot + '/assets/svg'
+                    ]
+                }),
+                require('autoprefixer')({
+                    browsers: ['last 2 versions', '> 5% in GB']
+                }),
+                require('cssnano')({
+                    discardComments: {
+                        removeAll: true
+                    },
+                    discardEmpty: true,
+                    calc: {
+                        precision: 3
+                    }
+                })
+            ]
         }
       },
       {
