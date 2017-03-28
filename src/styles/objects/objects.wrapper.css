@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Wrapper
+   ========================================================================== */
+
+.o-wrapper__container {
+    background: $colour-grey-x-light;
+}
+.o-wrapper {
+    background: $colour-white;
+    max-width: $grid-width;
+    margin: 0;
+    @media ($mq-xl-max) {
+        padding: 0 15px;
+    }
+    @media ($mq-md-min) {
+        margin: 0 auto;
+    }
+    .c-header &, .c-footer & {
+        margin-bottom: 0;
+    }
+}

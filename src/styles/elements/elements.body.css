@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Body
+   ========================================================================== */
+
+body {
+    font-family: $font-body;
+    font-weight: $font-light;
+    font-size: responsive $font-size-min $font-size-max;
+    line-height: 1.5;
+    color: $colour-echo;
+    -webkit-font-smoothing: antialiased;
+}

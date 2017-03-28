@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.c-navigation {
+    display: flex;
+    margin-left: $grid-padding;
+    max-width: 655px;
+    width: 100%;
+    @mixin flex-align center;
+    @media (max-width: 1280px) {
+        max-width: 460px;
+    }
+    @media ($mq-md-max) {
+        display: none;
+    }
+}
+.c-navigation__list {
+    display: flex;
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+.c-navigation__item {
+    margin: 0 25px;
+    display: flex;
+    flex: 0 1 auto;
+    font-size: 18px;
+    font-weight: $font-semibold;
+    @mixin flex-align center;
+    @media (max-width: 1280px) {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        height: 100%;
+        color: $colour-echo;
+        &:hover {
+            color: $colour-delta;
+        }
+    }
+}
+.c-navigation__item--active {
+    a {
+        color: $colour-bravo;
+        font-weight: $font-medium;
+    }
+}
+.c-navigation__link {
+    padding: $base-line-height 0;
+}

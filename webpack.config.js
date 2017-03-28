@@ -21,8 +21,8 @@ module.exports = {
                 require('postcss-responsive-type'),
                 require('postcss-assets')({
                     loadPaths: [
-                        projectRoot + '/assets/img',
-                        projectRoot + '/assets/svg'
+                        projectRoot + './src/assets/images/',
+                        projectRoot + './src/assets/svg/'
                     ]
                 }),
                 require('autoprefixer')({

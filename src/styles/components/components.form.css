@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Form pages
+   ========================================================================== */
+
+.c-form__container {
+    padding: 140px 40px;
+    @media ($mq-md-min) and ($mq-xl-max) {
+        padding: 80px 20px;
+    }
+    @media ($mq-md-max) {
+        padding: 60px 20px;
+    }
+}
+.c-form__main {
+    display: flex;
+    @mixin flex-justify space-between;
+    @mixin flex-parent row, nowrap, sm, column, wrap;
+}
+
+
+/*
+   Form header
+   ========================================================================== */
+
+.c-form__header {
+    max-width: 600px;
+    @media ($mq-lg-max) {
+        max-width: 50%;
+    }
+    @media ($mq-sm-max) {
+        max-width: 100%;
+    }
+}
+
+
+/*
+   Form
+   ========================================================================== */
+
+.c-form {
+    flex: 0 1 auto;
+    width: 680px;
+    @media ($mq-sm-max) {
+        width: 100%;
+    }
+}
+.c-form__heading {
+    color: $colour-alpha;
+}
+.c-form__text {
+    font-size: responsive 16px 20px;
+    font-weight: $font-regular;
+}
+.c-form__box {
+    background: $colour-grey-light;
+    border-radius: 10px;
+}
+
+
+/*
+   Sidebar
+   ========================================================================== */
+
+.c-form__sidebar {
+    flex: 0 1 auto;
+    width: 505px;
+    height: 100%;
+    background: $colour-bravo-light;
+    border-radius: 10px;
+    margin: 0 4.5%;
+    padding: 80px 50px 56px;
+    text-align: center;
+    color: $colour-white;
+    @media (max-width: 1385px) {
+        margin-right: 0;
+    }
+    @media ($mq-lg-max) {
+        padding: 40px 30px;
+    }
+    @media ($mq-sm-max) {
+        width: 100%;
+        height: auto;
+        margin: 40px 0 0;
+    }
+    a {
+        color: $colour-white;
+        text-decoration: underline;
+        &:hover {
+            color: $colour-alpha;
+        }
+    }
+}
+.c-form__sidebar-heading {
+    font-size: responsive 20px 28px;
+    color: $colour-white;
+}
+.c-form__sidebar-text--title {
+    display: block;
+    font-weight: $font-bold;
+}
+.c-form__sidebar-text--email {
+    display: block;
+    font-weight: $font-regular;
+}

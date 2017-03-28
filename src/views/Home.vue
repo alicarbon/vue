@@ -9,9 +9,8 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Home'
+      msg: 'Home!'
     }
   }
 }
 </script>
-

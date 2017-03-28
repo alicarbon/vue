@@ -33,7 +33,7 @@
     width: 242px;
     height: 55px;
     text-indent: -9em;
-    background: inline("../../assets/svg/brand-elements/logo.svg") no-repeat 0/contain;
+    background: inline("./assets/svg/brand-elements/logo.svg") no-repeat 0/contain;
     overflow: hidden;
     @media ($mq-sm-min) and ($mq-md-max) {
         width: 30.58%;
