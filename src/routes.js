@@ -1,8 +1,8 @@
 import HomeComponent from './views/Home.vue'
 import Topic1Home from './views/topic-1/home.vue'
-import Topic2Home from './views/topic-2/home.vue'
-import Topic3Home from './views/topic-3/home.vue'
-import Topic4Home from './views/topic-4/home.vue'
+import Topic21Home from './views/topic-2-1/home.vue'
+import Topic22Home from './views/topic-2-2/home.vue'
+import Topic23Home from './views/topic-2-3/home.vue'
 const Scene = {
     props:['id'],
     template: `<div>This is scene {{ id }}</div>`
@@ -19,16 +19,16 @@ export default [
         component: Topic1Home
     },
     {
-        path: '/topic-2',
-        component: Topic2Home
+        path: '/topic-2-1',
+        component: Topic21Home
     },
     {
-        path: '/topic-3',
-        component: Topic3Home
+        path: '/topic-2-2',
+        component: Topic22Home
     },
     {
-        path: '/topic-4',
-        component: Topic4Home
+        path: '/topic-2-3',
+        component: Topic23Home
     },
     {
         path: '/scene/:id',

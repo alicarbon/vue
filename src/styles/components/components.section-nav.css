@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Section Nav
+   ========================================================================== */
+
+.c-section-nav__container {
+    width: 100%;
+}
+
+.c-section-nav__container--buttons {
+    background: $colour-white;
+}
+
+.c-section-nav {
+    display: flex;
+    @mixin flex-justify space-between;
+    @mixin flex-align center;
+    max-width: $grid-width;
+    margin: 0 auto;
+    padding: $grid-padding;
+}
+
+.c-section-nav__label {
+    font-size: responsive 24px 28px;
+    color: $colour-alpha;
+}
+
+.c-section-nav__list {
+    margin: 0 auto;
+    display: flex;
+}
+
+.c-section-nav__list-item {
+    padding: 0 $grid-padding;
+    display: flex;
+    @mixin flex-base column;
+    @mixin flex-align center;
+    position: relative;
+
+    &:before {
+        margin: 0 0 12px;
+        content: "";
+        display: block;
+        height: 44px;
+        width: 44px;
+        background: $colour-alpha-dark;
+        border-radius: 999px;
+    }
+
+    &:not(:nth-child(1)):after {
+        content: ".....";
+        display: block;
+        color: $colour-alpha-dark;
+        font-size: 26px;
+        position: absolute;
+        left: -15px;
+        top: 0;
+    }
+
+    a {
+        color: $colour-alpha-dark;
+    }
+}

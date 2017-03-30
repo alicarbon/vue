@@ -39,7 +39,7 @@
 .c-button--alpha {
     color: $colour-white;
     background: $colour-alpha;
-    box-shadow: 4px 4px 0 0 $colour-alpha-dark;
+    //box-shadow: 4px 4px 0 0 $colour-alpha-dark;
     @mixin button-hover $colour-alpha-dark;
 }
 

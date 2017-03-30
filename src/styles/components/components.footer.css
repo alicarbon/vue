@@ -3,61 +3,13 @@
    ========================================================================== */
 
 .c-footer__container {
-    background: $colour-grey-x-light;
+    background: $colour-alpha
 }
 .c-footer {
     display: flex;
     max-width: $grid-width;
     margin: 0 auto;
-    background: $colour-alpha-dark url("./assets/images/brand-elements/background.png") repeat;
-    height: 260px;
     @mixin flex-align center;
     @mixin flex-justify center;
     @mixin flex-base column, nowrap;
-    @media ($mq-sm-max) {
-        height: 300px;
-    }
-    @media ($mq-xs-max) {
-        height: 350px;
-    }
-}
-
-/*
-   Content
-   ========================================================================== */
-
-.c-footer__social {
-    margin-bottom: $grid-padding;
-    a {
-        &:not(:last-of-type) {
-            margin-right: calc($grid-gutter / 1.5);
-        }
-    }
-}
-.c-footer__text {
-    font-size: 13px;
-    max-width: 900px;
-    width: 90%;
-    text-align: center;
-    color: $colour-white;
-    @media ($mq-xs-max) {
-        width: 88%;
-    }
-    &:last-of-type {
-        margin-bottom: 0px;
-    }
-}
-
-.c-footer__carbon {
-    text-align: center;
-    p {
-        font-size: 13px;
-        a {
-            font-weight: $font-regular;
-            text-decoration: underline;
-            &:hover {
-                color: $colour-delta;
-            }
-        }
-    }
 }

@@ -51,12 +51,12 @@
    CTA
    ========================================================================== */
 
-.c-header__cta {
+.c-header__user {
     display: flex;
-    background: $colour-alpha;
     height: 100%;
     padding: $grid-padding $grid-gutter;
     margin-left: auto;
+    text-align: center;
     @mixin flex-base column, nowrap;
     @media (max-width: 1280px) {
         padding: calc($grid-padding / 1.5) calc($grid-gutter / 2);
@@ -68,6 +68,21 @@
         display: none;
     }
 }
-.c-header__cta-text {
-    @mixin login-text;
+
+.c-header__user-heading {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: $colour-alpha;
+    line-height: 1;
+}
+
+.c-header__user-text {
+    margin: 0;
+    font-size: 15px;
+    color: $colour-alpha;
+    line-height: 1;
+
+    a {
+        text-decoration: underline;
+    }
 }

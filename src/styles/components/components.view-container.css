@@ -1,5 +1,8 @@
 .c-view-container {
     padding: 1.5em;
     flex: 1;
-    background: #f2f2f2;
+    background-image: url('./assets/images/background-wood.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
