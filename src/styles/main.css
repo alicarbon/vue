@@ -2,15 +2,6 @@
    Styles
    ========================================================================== */
 
-@import "./components/_app.css";
-/*@import "./components/_header.css";
-@import "./components/_footer.css";*/
-@import "./components/components.view-container.css";
-
-@import "./scenes/_topic-1.css";
-@import "./scenes/_topic-2.css";
-
-
 /* ==========================================================================
    Settings
    ========================================================================== */
@@ -42,6 +33,7 @@
 @import "elements/elements.links";
 @import "elements/elements.lists";
 @import "elements/elements.paragraphs";
+@import "elements/elements.videos";
 
 /* ==========================================================================
    Objects
@@ -54,6 +46,8 @@
    Components
    ========================================================================== */
 
+@import "components/_app.css";
+@import "components/components.view-container.css";
 @import "components/components.button";
 /*@import "components/components.card-casestudy";
 @import "components/components.card-info";
@@ -75,9 +69,17 @@
 @import "components/components.timeline";
 @import "components/components.validation";*/
 @import "components/components.section-nav";
+@import "components/components.video";
 
 /* ==========================================================================
    Trumps
    ========================================================================== */
 
 /*@import "trumps/trumps.lazysizes";*/
+
+/* ==========================================================================
+   Topics
+   ========================================================================== */
+
+@import "scenes/_topic-1.css";
+@import "scenes/_topic-2.css";

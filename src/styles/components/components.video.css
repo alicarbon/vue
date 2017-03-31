@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Video
+   ========================================================================== */
+
+.c-video {
+    width: 100%;
+}
+
+.c-video-controls {
+    z-index: 9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    //opacity: 0;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    -ms-transition: opacity .3s;
+    transition: opacity .3s;
+    background: #f2f2f2;
+}
+
+#video-container:hover #video-controls {
+    opacity: .9;
+}
+
+.c-video-controls__play-pause {
+
+}
+
+.c-video-controls__seek-bar {
+    width: 360px;
+}
+
+.c-video-controls__mute {
+
+}
+
+.c-video-controls__volume-bar {
+    width: 60px;
+}

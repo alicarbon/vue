@@ -1,6 +1,6 @@
 <template>
 
-      <div class="o-page-container">
+    <div class="o-page-container">
         <div id="app">
 
           <header class="c-header">
@@ -66,9 +66,9 @@
 
           </footer>
 
-      </div>
+        </div>
 
-  </div>
+    </div>
 </template>
 
 <script>

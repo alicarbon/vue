@@ -31,22 +31,9 @@
 
 .c-section-nav__list-item {
     padding: 0 $grid-padding;
-    display: flex;
-    @mixin flex-base column;
-    @mixin flex-align center;
     position: relative;
 
-    &:before {
-        margin: 0 0 12px;
-        content: "";
-        display: block;
-        height: 44px;
-        width: 44px;
-        background: $colour-alpha-dark;
-        border-radius: 999px;
-    }
-
-    &:not(:nth-child(1)):after {
+    &:not(:nth-child(1)):before {
         content: ".....";
         display: block;
         color: $colour-alpha-dark;
@@ -54,6 +41,32 @@
         position: absolute;
         left: -15px;
         top: 0;
+    }
+
+    a {
+        display: flex;
+        @mixin flex-base column;
+        @mixin flex-align center;
+        position: relative;
+
+        &:before {
+            margin: 0 0 12px;
+            content: "";
+            display: block;
+            height: 44px;
+            width: 44px;
+            background: $colour-alpha-dark;
+            border-radius: 999px;
+            transition: background $transition-duration $transition-easing;
+        }
+
+        &:hover {
+            color: $colour-white;
+
+            &:before {
+                background: $colour-white;
+            }
+        }
     }
 
     a {
